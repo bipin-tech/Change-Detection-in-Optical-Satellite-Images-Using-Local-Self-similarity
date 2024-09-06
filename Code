@@ -58,8 +58,8 @@ def fun(i,j):
     return 1
 
 
-im = cv2.imread("set1.tif", 0)
-im2 = cv2.imread("set2.tif", 0)
+im = cv2.imread("set11.tif", 0)
+im2 = cv2.imread("set12.tif", 0)
 image = cv2.copyMakeBorder(im, 3, 3, 3, 3, cv2.BORDER_CONSTANT)
 image2 = cv2.copyMakeBorder(im2, 3, 3, 3, 3, cv2.BORDER_CONSTANT)
 
@@ -91,7 +91,7 @@ plt.subplot(222), plt.imshow(image2,'gray'),plt.title("image2"),plt.axis('off')
 plt.subplot(223), plt.imshow(out,'gray'),plt.title("image ch"),plt.axis('off')
 plt.show()
 result=new[ 3:r-3, 3:c-3 ]
-ground = cv2.imread("gt.tif",0)
+ground = cv2.imread("gt1.tif",0)
 a=result.flatten()
 b=ground.flatten()
 accuracy = accuracy_score(a, b)
